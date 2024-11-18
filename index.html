@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steam</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="responsive_header_content">
+        <div class="responsive_header_logo">
+          <a
+            href="https://store.steampowered.com/?snr=1_4_4__global-responsive-menu"
+          >
+            <img
+              src="https://store.cloudflare.steamstatic.com/public/shared/images/responsive/header_logo.png"
+              height="36"
+              alt="STEAM"
+            />
+          </a>
+        </div>
+        <h3 id="displayTitle"></h3>
+        <div class="nav_links">
+          <li data-page="home">Home</li>
+          <li data-page="trending">Trending</li>
+          <li>About us</li>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="search_area">
+        <div id="store_search">
+          <form name="searchForm">
+            <div class="searchbox">
+              <input
+                id="searchForm"
+                name="searchForm"
+                type="text"
+                class="default"
+                placeholder="search"
+                size="22"
+                maxlength="64"
+              />
+              <div id="store_search_link">
+                <img
+                  src="https://store.cloudflare.steamstatic.com/public/images/blank.gif"
+                />
+              </div>
+            </div>
+          </form>
+          <div class="category">
+            <ul class="categoryGroup">
+              <li data-category="action">Action</li>
+              <li data-category="fps">FPS</li>
+              <li data-category="multiplayer">Multiplayer</li>
+              <li data-category="survival">Survival</li>
+              <li data-category="rpg">RPG</li>
+              <li data-category="free to play">Free to play</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="showing_game" id="display">
+        <p class="error-message"></p>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
