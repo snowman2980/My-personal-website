@@ -1,0 +1,332 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+  color: #c6d4df;
+  background: url(/public/images/v6/colored_body_top.png?v=2) center top
+    no-repeat #1b2838;
+}
+
+/* Header */
+img {
+  border: none;
+}
+
+header {
+  background: #171a21;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 0 7px 0 rgb(0 0 0 / 75%);
+  padding: 1em 0.5em;
+  margin-bottom: 1em;
+  z-index: 20;
+}
+
+.responsive_header_content {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.nav_links {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  cursor: default;
+}
+
+.nav_links li:hover {
+  filter: brightness(300%);
+}
+
+/* Main container */
+#responsive_header_search_btn {
+  position: absolute;
+  top: 9px;
+  cursor: pointer;
+  width: 36px;
+  height: 31px;
+}
+
+main {
+  position: relative;
+
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.search_area {
+  max-width: 210px;
+}
+
+div#store_search {
+  float: none;
+  padding: 3px 4px 2px;
+  height: 30px;
+}
+
+.searchbox {
+  background-image: none;
+  background-color: #316282;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 0px rgb(255 255 255 / 20%);
+  color: #fff;
+  margin-bottom: 0px;
+  outline: none;
+  height: 27px;
+  padding: 0px 6px;
+  position: relative;
+}
+
+.searchbox input {
+  border: none;
+  background-color: transparent;
+  color: #eeeeee;
+  margin-top: 2px;
+  margin-left: 8px;
+  width: calc(100% - 25px - 8px);
+  outline: none;
+  line-height: 26px;
+}
+
+.searchbox input.default {
+  color: #ebeef0;
+  font-size: 15px;
+  margin-top: 1px;
+  text-shadow: 1px 1px 0px rgb(255 255 255 / 10%);
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+}
+
+#store_search_link img {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  right: 0;
+  background-image: url(https://store.cloudflare.steamstatic.com/public/images/v6/search_icon_btn.png);
+}
+
+#store_search_link img:hover {
+  filter: brightness(150%);
+}
+
+main #store_search .category ul {
+  color: #66c0f4;
+  list-style-type: none;
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 2px solid #316282;
+  cursor: pointer;
+}
+
+main #store_search .category ul li {
+  padding-bottom: 1em;
+}
+
+main #store_search .category li:hover {
+  filter: brightness(200%);
+  background-color: #1f4c6a;
+  border-radius: 4px;
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+main .showing_game {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+
+  height: auto;
+}
+
+main .showing_game .game_wrapper {
+  width: 270px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+  border-radius: 10px;
+  flex-basis: 0 0 25%;
+}
+
+main .showing_game .game_wrapper .cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+main .showing_game .game_wrapper .cover img {
+  object-fit: contain;
+}
+
+main .showing_game .game_wrapper .cover img:hover {
+  filter: brightness(150%);
+}
+
+main .showing_game .game_wrapper .cover .game_info {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Motiva Sans", Sans-serif;
+  font-size: 1.2em;
+  background: linear-gradient(
+    -45deg,
+    rgba(64, 121, 153, 1) 5%,
+    rgba(42, 62, 89, 1) 95%
+  );
+  height: 45px;
+  align-items: center;
+}
+
+main .showing_game .game_wrapper .cover .game_info p {
+  padding: 5px;
+  color: #acdbf5;
+}
+
+main .show_detail {
+  flex-direction: column;
+  margin-left: 5px;
+}
+
+main .show_detail a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.show_detail .title {
+  color: white;
+  font-family: Motiva Sans, Arial, Helvetica, sans-serif;
+  font-size: 1.7em;
+  line-height: 32px;
+  text-overflow: ellipsis;
+  font-weight: normal;
+  padding: 0;
+}
+
+.show_detail .price {
+  color: #acdbf5;
+  padding: 0 6px;
+  display: inline-block;
+  padding: 0 3px;
+  line-height: 17px;
+}
+
+.show_detail .img_detail {
+  display: flex;
+  background-position: bottom;
+  padding-bottom: 1px;
+  margin: 0px auto;
+  padding: 16px;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.show_detail .game_details .game_description {
+  max-height: 120px;
+  max-width: 400px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 15px;
+  padding: 0 16px;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+.show_detail .game_details .game_informations {
+  font-size: 12px;
+  padding: 16px;
+  min-width: 94px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #66c0f4;
+  line-height: 20px;
+}
+
+.show_detail .tags_contain {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  font-size: 12px;
+  padding: 16px;
+}
+
+.show_detail .tags_contain .tags {
+  display: flex;
+}
+
+.show_detail .tags_contain .tags .tag {
+  display: inline-block;
+  line-height: 19px;
+  padding: 0 7px;
+  color: #67c1f5;
+  background-color: rgba(103, 193, 245, 0.2);
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 4px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #67c1f5;
+}
+
+.error-message {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #155580c9;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 200%;
+  padding: 20px;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
